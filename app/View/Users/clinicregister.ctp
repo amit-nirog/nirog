@@ -28,7 +28,7 @@
 				<div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
 						<label>Clinic Name</label>
-	<?php echo $this->Form->input('User.first_name', array('type' => 'text', 'id' => 'first_name', 'class' => "form-control input-block-level txtfield required", 'minlength' => 3, 'maxlength' => 60, 'autocomplete' => "off", "placeholder" => "First Name",'tabindex' => '1',"label" => false)); ?>
+	<?php echo $this->Form->input('User.first_name', array('type' => 'text', 'id' => 'first_name','tabindex'=> '1', 'class' => "form-control input-block-level txtfield required", 'minlength' => 3, 'maxlength' => 60, 'autocomplete' => "off", "placeholder" => "First Name",'tabindex' => '1',"label" => false)); ?>
     
 					</div>
                                     </div>
@@ -37,12 +37,12 @@
 					<div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 						<label>Mobile Number</label>
-						<?php echo $this->Form->input('User.mobile_no', array('type' => 'text', 'id' => 'mobile', 'class' => "form-control input-block-level txtfield number required", 'minlength' => 10, 'maxlength' => 12, 'autocomplete' => "off", "placeholder" => "Mobile number",'tabindex' => '4',"label" => false)); ?>
+						<?php echo $this->Form->input('User.mobile_no', array('type' => 'text', 'tabindex'=> '2', 'id' => 'mobile', 'class' => "form-control input-block-level txtfield number required", 'minlength' => 10, 'maxlength' => 12, 'autocomplete' => "off", "placeholder" => "Mobile number",'tabindex' => '4',"label" => false)); ?>
        
 					</div>
 					<div class="col-md-6 col-sm-12 col-xs-12 form-group">
 						<label>E-Mail Address</label>
-						<?php echo $this->Form->input('User.email', array('type' => 'email', 'id' => 'username', 'class' => "form-control input-block-level txtfield required", 'autocomplete' => "off", "placeholder" => "Username - Email",'tabindex' => '3',"label" => false)); ?>		
+						<?php echo $this->Form->input('User.email', array('type' => 'email', 'tabindex'=> '3', 'id' => 'username', 'class' => "form-control input-block-level txtfield required", 'autocomplete' => "off", "placeholder" => "Username - Email",'tabindex' => '3',"label" => false)); ?>		
         
 					</div>
 					</div>
@@ -50,12 +50,12 @@
 					<div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 						<label>Create Password</label>
-						<?php echo $this->Form->input('User.password', array('type' => 'password', 'id' => 'passwrd', 'class' => "form-control input-block-level txtfield required", 'minlength' => 6, 'maxlength' => 20, 'autocomplete' => "off", "placeholder" => "Password",'tabindex' => '5',"label" => false)); ?>
+						<?php echo $this->Form->input('User.password', array('type' => 'password','tabindex'=> '4', 'id' => 'passwrd', 'class' => "form-control input-block-level txtfield required", 'minlength' => 6, 'maxlength' => 20, 'autocomplete' => "off", "placeholder" => "Password",'tabindex' => '5',"label" => false)); ?>
 
 					</div>
 					<div class="col-md-6 col-sm-12 col-xs-12 form-group">
 						<label>Confirm Password</label>
-						<?php echo $this->Form->input('User.cnfpassword', array('type' => 'password', 'id' => 'cnfpassword', 'class' => "form-control input-block-level txtfield required", 'minlength' => 6, 'maxlength' => 20, 'autocomplete' => "off", "placeholder" => "Confirm Password",'tabindex' => '6',"label" => false)); ?> 
+						<?php echo $this->Form->input('User.cnfpassword', array('type' => 'password', 'tabindex'=> '5', 'id' => 'cnfpassword', 'class' => "form-control input-block-level txtfield required", 'minlength' => 6, 'maxlength' => 20, 'autocomplete' => "off", "placeholder" => "Confirm Password",'tabindex' => '6',"label" => false)); ?> 
   
 					</div>
 					</div>
