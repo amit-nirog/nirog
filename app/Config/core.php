@@ -388,15 +388,14 @@ Cache::config('_cake_model_', array(
 ));
 if ($_SERVER['HTTP_HOST'] == "localhost") {
     define("BASEURL", "http://" . $_SERVER['HTTP_HOST'] . "/nirog/");
-    define("_ROOT", "http://" . $_SERVER['HTTP_HOST'] . "/nirog/");
-    define("IMG_URL", "http://localhost/nirog/images/");
-    define("PROFILE_URL", "http://localhost/nirog/img/");
-    define("BACHLOR_URL", "http://localhost/nirog/bachlor/");
+    
     
 } else {
     define("BASEURL", "http://" . $_SERVER['HTTP_HOST'] . "/");
-    define("_ROOT", "http://" . $_SERVER['HTTP_HOST'] . "/");
-    define("IMG_URL", "http://" . $_SERVER['HTTP_HOST'] . "" . "/images/");
-    define("PROFILE_URL", "http://" . $_SERVER['HTTP_HOST'] . "" . "/img/");
-    define("BACHLOR_URL", "http://" . $_SERVER['HTTP_HOST'] . "" . "/bachlor/");
+    
 }
+
+define("_ROOT", BASEURL);
+define("IMG_URL", BASEURL."images/");
+define("PROFILE_URL", BASEURL."img/");
+define("BACHLOR_URL", BASEURL."bachlor/");

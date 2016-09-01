@@ -6,12 +6,13 @@ class CommonComponent extends Component {
     {      
        
         $ch = curl_init();
-        $key = '22551';
-        $msg_token ='ut12345';
-        $senderid ='JKRACE';
+        $key = '851';
+        $msg_token ='well@vgt';
+        $senderid ='Nirogs';
         $optp =$this->generate_password(); 
         $message='OTP+is+'.$optp; 
-        $url ="http://192.111.149.178/unified.php?usr=".$key."&pwd=".$msg_token."&ph=".$mobileN."&sndr=".$senderid."&text=".$message;
+    
+        $url ="http://push.vg4mobile.com/newBulkClient.jsp?senderID=".$senderid."&msisdn=".$mobileN."&userid=".$key."&msg=".$message."&pwd=".$msg_token;
       
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -19,6 +20,7 @@ class CommonComponent extends Component {
         $res_arr = json_decode($res);
         return $optp;
     }
+    
     function generate_password()
     {
          $length = 6 ;

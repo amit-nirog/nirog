@@ -72,7 +72,7 @@
                                 </form>
                                 <?php if ($userDetails['User']['rg_proff'] != '') { ?>
                                     <input type="hidden"  class="upload1" id="rg1" value="<?php echo $userDetails['User']['rg_proff']; ?>">
-                                    <td ><input type="button"  class="upload1 rg" value="Del" id="<?php echo $userDetails['User']['id']; ?>"></td>
+                                    <td ><input type="button"  class="upload1 rg" value="Delete" id="<?php echo $userDetails['User']['id']; ?>"></td>
                                 <?php } ?>
                                 </tr>
                                 <style>
@@ -108,7 +108,10 @@
                                        var id =  this.id; 
                                        var img =  $("#rg1").val();
                                         $.post("" + ur + "Users/regdelete", {"data[User][id]": id,"data[User][rg_proff]": img}, function (d) {
-                                            console.log(d);
+                                            if (d.r = 1) {
+                                                    $("#stage1").html("deleted");
+                                                    $('.rg').hide();
+                                                }
                                         });
                                     });
 
@@ -125,7 +128,7 @@
                                 </form>  
                                 <?php if ($userDetails['User']['bachlor'] != '') { ?>
                                   <input type="hidden"  class="upload1" id="bach1" value="<?php echo $userDetails['User']['bachlor']; ?>">
-                                    <td ><input type="button"  class="upload1 bach" value="Del" id="<?php echo $userDetails['User']['id']; ?>"></td> 
+                                    <td ><input type="button"  class="upload1 bachs" value="Delete" id="<?php echo $userDetails['User']['id']; ?>"></td> 
                                 <?php } ?>
                                 </tr>
                                 <style>
@@ -156,12 +159,15 @@
                                             }
                                         });
                                     });
-                                    $('.bach').click(function () {
+                                    $('.bachs').click(function () {
                                         var ur = "<?php echo $this->Html->url('/', true) ?>";
                                        var id =  this.id; 
                                        var img =  $("#bach1").val();
                                         $.post("" + ur + "Users/bechdelete", {"data[User][id]": id,"data[User][bachlor]": img}, function (d) {
-                                            console.log(d);
+                                            if (d.r = 1) {
+                                                    $("#stage2").html("deleted");
+                                                    $('.bachs').hide();
+                                                }
                                         });
                                     });
                                 </script>
@@ -174,8 +180,9 @@
                                     <td id="stage3"></td>
                                     <td><a href="" class="upload1" id="upload_lic">Upload</a></td>
                                 </form> 
-                                <?php if ($userDetails['User']['rg_proff'] != '') { ?>
-                                    <td><a href="" class="upload1" id="upload_reg">Delete</a></td>
+                                <?php if ($userDetails['User']['master'] != '') { ?>
+                                  <input type="hidden"  class="upload1" id="gid1" value="<?php echo $userDetails['User']['master']; ?>">
+                                    <td ><input type="button"  class="upload1 gid" value="Delete" id="<?php echo $userDetails['User']['id']; ?>"></td> 
                                 <?php } ?>
                                 </tr>
 
@@ -213,7 +220,10 @@
                                        var id =  this.id; 
                                        var img =  $("#gid1").val();
                                         $.post("" + ur + "Users/masdelete", {"data[User][id]": id,"data[User][master]": img}, function (d) {
-                                            console.log(d);
+                                          if (d.r = 1) {
+                                                    $("#stage3").html("deleted");
+                                                    $('.gid').hide();
+                                                }
                                         });
                                     });
                                 </script>
@@ -229,8 +239,9 @@
                                     <td id="stage4"></td>
                                     <td><a href="" class="upload1" id="upload_pre">Upload</a></td>
                                 </form> 
-                                <?php if ($userDetails['User']['rg_proff'] != '') { ?>
-                                    <td><a href="" class="upload1" id="upload_reg">Delete</a></td>
+                                <?php if ($userDetails['User']['add_certificate'] != '') { ?>
+                                  <input type="hidden"  class="upload1" id="adc1" value="<?php echo $userDetails['User']['add_certificate']; ?>">
+                                    <td ><input type="button"  class="upload1 adc" value="Delete" id="<?php echo $userDetails['User']['id']; ?>"></td> 
                                 <?php } ?>
 
                                 </tr>
@@ -264,6 +275,17 @@
                                             }
                                         });
                                     });
+                                    $('.adc').click(function () {
+                                        var ur = "<?php echo $this->Html->url('/', true) ?>";
+                                       var id =  this.id; 
+                                       var img =  $("#adc1").val();
+                                        $.post("" + ur + "Users/cerdelete", {"data[User][id]": id,"data[User][add_certificate]": img}, function (d) {
+                                             if (d.r = 1) {
+                                                    $("#stage4").html("deleted");
+                                                    $('.adc').hide();
+                                                }
+                                        });
+                                    });
                                 </script>
 
 
@@ -278,8 +300,9 @@
                                     <td id="stage5"></td>
                                     <td><a href="" class="upload1" id="upload_oth">Upload</a></td>
                                 </form> 
-                                <?php if ($userDetails['User']['rg_proff'] != '') { ?>
-                                    <td><a href="" class="upload1" id="upload_reg">Delete</a></td>
+                                <?php if ($userDetails['User']['other'] != '') { ?>
+                                  <input type="hidden"  class="upload1" id="opk1" value="<?php echo $userDetails['User']['other']; ?>">
+                                    <td ><input type="button"  class="upload1 opk" value="Delete" id="<?php echo $userDetails['User']['id']; ?>"></td> 
                                 <?php } ?>
                                 </tr>
 
@@ -309,6 +332,18 @@
                                                 }
                                                 $('.reg').attr("src", "<?php echo $this->Html->url("/images/"); ?>" + "gh.jpg");
                                             }
+                                        });
+                                    });
+                                    
+                                    $('.opk').click(function () {
+                                        var ur = "<?php echo $this->Html->url('/', true) ?>";
+                                       var id =  this.id; 
+                                       var img =  $("#opk1").val();
+                                        $.post("" + ur + "Users/othdelete", {"data[User][id]": id,"data[User][other]": img}, function (d) {
+                                                if (d.r = 1) {
+                                                    $("#stage5").html("deleted");
+                                                    $('.opk').hide();
+                                                } 
                                         });
                                     });
                                 </script>
