@@ -1,0 +1,52 @@
+  function onSubmitFunction(){
+    $.ajax({
+        type: "POST",
+        url: "/ajax",
+        data: $('#mytestForm').serialize(),
+        success: function(msg){
+            if(msg.success){
+               //here success comes
+            }
+
+        }
+    });
+    return false;
+}
+=============================================
+
+Question: How can I add a custom HTTP header in Ajax?
+Just Use the header parameter to set the custom header
+$.ajax({
+    url: '/ajax',
+    headers: { 'x-my-custom-header': 'I am good' }
+});
+
+Question: What is Ajax?
+AJAX (Asynchronous JavaScript and XML) is a client-side script which is used to get the data from Server.
+
+
+Question: Why Ajax is used?
+Ajax is used to get the data from server without refreshing the current page.
+
+============================================
+Question: What is XMLHttpRequest?
+XMLHttpRequest is an API available to web browser scripting languages (i.e. JavaScript).
+It is used to send HTTP/HTTPS requests to a web server and load the server's response into the script
+=============================================
+Question: Define JSON?
+JSON is JavaScript Object Notation.
+
+=============================================
+Question: What type of response we can get in Ajax Response?
+text data
+html data
+JSON data
+XML data
+===========================================
+Question: What is the difference between ports 465 and 587?
+Both are protocol.
+465 is for SMTPS protocol, In this SSL encryption is started automatically before any SMTP level communication.
+587 is for MSA protocol. SSL encryption may be started by STARTTLS command at SMTP level(if server supports). In this ISP does not filter server's EHLO reply.It helps to stop outgoing spam email. 
+==============================================
+Question: How to check if smtp is working from commandline?
+telnet {smtp_domain_name} {smtp_port}
