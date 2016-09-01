@@ -27,6 +27,7 @@ class UsersController extends AppController {
                     $responOPT = $this->Common->generatedOTP($mono);
                     $Result['OPT'] = $responOPT;
                     $this->request->data["User"]['token'] = $Result['OPT'];
+                    $this->request->data["User"]['status'] = 0;
                     if ($this->User->save($this->request->data)) {
                         $lid = $this->User->getLastInsertID();
                         $this->request->data['Professional']['user_id'] = $this->User->getLastInsertID();
@@ -86,7 +87,14 @@ class UsersController extends AppController {
         ));
         $this->set('userDetail', $userDetail);
         if ($this->request->is('post')) {
+             $this->request->data['User']['id'] = $this->request->data['User']['id'];
+             $this->request->data['User']['status']=1;
+             if ($this->User->save($this->request->data)) {
+                     $this->Session->setFlash(__("success"), 'success');
+                }
             if ($userDetail['User']['token'] == $this->request->data['User']['token']) {
+                
+                
                 $this->redirect(array('controller' => 'users', 'action' => 'signin'));
                 $this->Session->setFlash(__("Please Login here."), 'success');
             } else {
@@ -208,7 +216,72 @@ class UsersController extends AppController {
         }
         
     }
+     public function masdelete(){
+        if ($this->request->is('post')) {
+           $ids = $this->Auth->user('id');
+           
+           $this->request->data['User']['id'] = $this->request->data['User']['id'];
+//           $im =$this->request->data['User']['rg_proff']
+//           unlink(WWW_ROOT."\regg\$this->request->data['User']['rg_proff']");
+            $this->request->data['User']['master'] = '';
+            
+           if ($this->User->save($this->request->data)) {
+                
+                $this->set("res",array('r' => 1));
+                $this->response->type('json');
+                $this->render('/Common/ajax', 'ajax');
+            } else {
+                $this->set("res", array('r' => 0));
+                $this->response->type('json');
+                $this->render('/Common/ajax', 'ajax');
+            }
+        }
+        
+    }
     
+    public function cerdelete(){
+        if ($this->request->is('post')) {
+           $ids = $this->Auth->user('id');
+           
+           $this->request->data['User']['id'] = $this->request->data['User']['id'];
+//           $im =$this->request->data['User']['rg_proff']
+//           unlink(WWW_ROOT."\regg\$this->request->data['User']['rg_proff']");
+            $this->request->data['User']['add_certificate'] = '';
+            
+           if ($this->User->save($this->request->data)) {
+                
+                $this->set("res",array('r' => 1));
+                $this->response->type('json');
+                $this->render('/Common/ajax', 'ajax');
+            } else {
+                $this->set("res", array('r' => 0));
+                $this->response->type('json');
+                $this->render('/Common/ajax', 'ajax');
+            }
+        }
+    }
+    
+    public function othdelete(){
+        if ($this->request->is('post')) {
+           $ids = $this->Auth->user('id');
+           
+           $this->request->data['User']['id'] = $this->request->data['User']['id'];
+//           $im =$this->request->data['User']['rg_proff']
+//           unlink(WWW_ROOT."\regg\$this->request->data['User']['rg_proff']");
+            $this->request->data['User']['other'] = '';
+            
+           if ($this->User->save($this->request->data)) {
+                
+                $this->set("res",array('r' => 1));
+                $this->response->type('json');
+                $this->render('/Common/ajax', 'ajax');
+            } else {
+                $this->set("res", array('r' => 0));
+                $this->response->type('json');
+                $this->render('/Common/ajax', 'ajax');
+            }
+        }
+    }
     
     public function document($id = "") {
         $ids = $this->Auth->user('id');
