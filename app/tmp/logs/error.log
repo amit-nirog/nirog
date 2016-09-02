@@ -36389,3 +36389,183 @@ Request URL: /nirog/fonts/open-sans-bold.woff
 Stack Trace:
 #0 C:\wamp\www\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-09-02 07:43:06 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:43:06 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:43:11 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:43:11 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:44:37 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:44:37 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:44:39 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:44:39 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:44:41 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:44:41 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:45:11 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:45:11 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:45:45 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:45:45 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:45:49 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:45:49 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:45:51 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:45:51 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:46:06 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-02 07:46:06 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

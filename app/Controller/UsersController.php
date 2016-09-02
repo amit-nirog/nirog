@@ -3,13 +3,13 @@
 class UsersController extends AppController {
 
     var $helpers = array('Html', 'Form');
-    public $uses = array("User", "Country", "State", "City", "Location", "Collage", "Degree", "DoctorType", "Board", "Professional");
+    public $uses = array("User", "Country", "State", "City", "Location", "Collage", "Degree", "DoctorType", "Board", "Professional","Token");
     var $components = array('Session', 'Auth', 'Common');
 
     function beforeFilter() {
         // tell Auth not to check authentication when doing the 'register' action
 
-        $this->Auth->allow('register', 'login', 'signin', 'logout', 'otp', 'admin_index', 'clinicregister','regdelete');
+        $this->Auth->allow('register', 'login', 'signin', 'logout', 'otp', 'admin_index', 'clinicregister', 'regdelete');
         parent::beforeFilter();
     }
 
@@ -31,6 +31,12 @@ class UsersController extends AppController {
                     if ($this->User->save($this->request->data)) {
                         $lid = $this->User->getLastInsertID();
                         $this->request->data['Professional']['user_id'] = $this->User->getLastInsertID();
+                        $this->request->data["Token"]['token']= $responOPT;
+                        $this->request->data["Token"]['mobile_no']  = $this->request->data["User"]['mobile_no'];
+                        $this->request->data["Token"]['user_id']  = $this->User->getLastInsertID();
+                        $this->request->data["Token"]['expire']  = date("Y/m/d h:i:s", strtotime("+30 minutes"));
+                        $this->request->data["Token"]['status']  = 1;
+                        $this->Token->save($this->request->data);
                         $this->Session->write('lastid', $lid);
                         $this->Professional->Save($this->request->data);
                         $Result['status'] = 'Success';
@@ -85,20 +91,17 @@ class UsersController extends AppController {
         $userDetail = $this->User->find('first', array(
             'conditions' => array('User.id' => $id)
         ));
+        $tokens = $this->Token->find('first', array(
+            'conditions' => array('Token.user_id' => $id)
+        ));
         $this->set('userDetail', $userDetail);
         if ($this->request->is('post')) {
-             $this->request->data['User']['id'] = $this->request->data['User']['id'];
-             $this->request->data['User']['status']=1;
-             if ($this->User->save($this->request->data)) {
-                     $this->Session->setFlash(__("success"), 'success');
-                }
-            if ($userDetail['User']['token'] == $this->request->data['User']['token']) {
-                
-                
-                $this->redirect(array('controller' => 'users', 'action' => 'signin'));
+            $this->request->data['User']['status'] = 1;
+            if ($tokens['Token']['token'] == $this->request->data['User']['token']) {
                 $this->Session->setFlash(__("Please Login here."), 'success');
+                $this->User->save($this->request->data);
+                $this->redirect(array('controller' => 'users', 'action' => 'signin'));
             } else {
-
                 $this->Session->setFlash(__("Sorry you enter wrong OTP"), 'error');
             }
         }
@@ -172,18 +175,18 @@ class UsersController extends AppController {
         }
     }
 
-    public function regdelete($id=""){
-         if ($this->request->is('post')) {
-           $ids = $this->Auth->user('id');
-           
-           $this->request->data['User']['id'] = $this->request->data['User']['id'];
+    public function regdelete($id = "") {
+        if ($this->request->is('post')) {
+            $ids = $this->Auth->user('id');
+
+            $this->request->data['User']['id'] = $this->request->data['User']['id'];
 //           $im =$this->request->data['User']['rg_proff']
 //           unlink(WWW_ROOT."\regg\$this->request->data['User']['rg_proff']");
             $this->request->data['User']['rg_proff'] = '';
-            
-           if ($this->User->save($this->request->data)) {
-                
-                $this->set("res",array('r' => 1));
+
+            if ($this->User->save($this->request->data)) {
+
+                $this->set("res", array('r' => 1));
                 $this->response->type('json');
                 $this->render('/Common/ajax', 'ajax');
             } else {
@@ -193,19 +196,19 @@ class UsersController extends AppController {
             }
         }
     }
-    
-    public function bechdelete(){
+
+    public function bechdelete() {
         if ($this->request->is('post')) {
-           $ids = $this->Auth->user('id');
-           
-           $this->request->data['User']['id'] = $this->request->data['User']['id'];
+            $ids = $this->Auth->user('id');
+
+            $this->request->data['User']['id'] = $this->request->data['User']['id'];
 //           $im =$this->request->data['User']['rg_proff']
 //           unlink(WWW_ROOT."\regg\$this->request->data['User']['rg_proff']");
             $this->request->data['User']['bachlor'] = '';
-            
-           if ($this->User->save($this->request->data)) {
-                
-                $this->set("res",array('r' => 1));
+
+            if ($this->User->save($this->request->data)) {
+
+                $this->set("res", array('r' => 1));
                 $this->response->type('json');
                 $this->render('/Common/ajax', 'ajax');
             } else {
@@ -214,20 +217,20 @@ class UsersController extends AppController {
                 $this->render('/Common/ajax', 'ajax');
             }
         }
-        
     }
-     public function masdelete(){
+
+    public function masdelete() {
         if ($this->request->is('post')) {
-           $ids = $this->Auth->user('id');
-           
-           $this->request->data['User']['id'] = $this->request->data['User']['id'];
+            $ids = $this->Auth->user('id');
+
+            $this->request->data['User']['id'] = $this->request->data['User']['id'];
 //           $im =$this->request->data['User']['rg_proff']
 //           unlink(WWW_ROOT."\regg\$this->request->data['User']['rg_proff']");
             $this->request->data['User']['master'] = '';
-            
-           if ($this->User->save($this->request->data)) {
-                
-                $this->set("res",array('r' => 1));
+
+            if ($this->User->save($this->request->data)) {
+
+                $this->set("res", array('r' => 1));
                 $this->response->type('json');
                 $this->render('/Common/ajax', 'ajax');
             } else {
@@ -236,21 +239,20 @@ class UsersController extends AppController {
                 $this->render('/Common/ajax', 'ajax');
             }
         }
-        
     }
-    
-    public function cerdelete(){
+
+    public function cerdelete() {
         if ($this->request->is('post')) {
-           $ids = $this->Auth->user('id');
-           
-           $this->request->data['User']['id'] = $this->request->data['User']['id'];
+            $ids = $this->Auth->user('id');
+
+            $this->request->data['User']['id'] = $this->request->data['User']['id'];
 //           $im =$this->request->data['User']['rg_proff']
 //           unlink(WWW_ROOT."\regg\$this->request->data['User']['rg_proff']");
             $this->request->data['User']['add_certificate'] = '';
-            
-           if ($this->User->save($this->request->data)) {
-                
-                $this->set("res",array('r' => 1));
+
+            if ($this->User->save($this->request->data)) {
+
+                $this->set("res", array('r' => 1));
                 $this->response->type('json');
                 $this->render('/Common/ajax', 'ajax');
             } else {
@@ -260,19 +262,19 @@ class UsersController extends AppController {
             }
         }
     }
-    
-    public function othdelete(){
+
+    public function othdelete() {
         if ($this->request->is('post')) {
-           $ids = $this->Auth->user('id');
-           
-           $this->request->data['User']['id'] = $this->request->data['User']['id'];
+            $ids = $this->Auth->user('id');
+
+            $this->request->data['User']['id'] = $this->request->data['User']['id'];
 //           $im =$this->request->data['User']['rg_proff']
 //           unlink(WWW_ROOT."\regg\$this->request->data['User']['rg_proff']");
             $this->request->data['User']['other'] = '';
-            
-           if ($this->User->save($this->request->data)) {
-                
-                $this->set("res",array('r' => 1));
+
+            if ($this->User->save($this->request->data)) {
+
+                $this->set("res", array('r' => 1));
                 $this->response->type('json');
                 $this->render('/Common/ajax', 'ajax');
             } else {
@@ -282,7 +284,7 @@ class UsersController extends AppController {
             }
         }
     }
-    
+
     public function document($id = "") {
         $ids = $this->Auth->user('id');
         $userDetail = $this->Professional->find('first', array(

@@ -24,12 +24,13 @@
 					
 				
 			
-					
+					<?php echo $this->Session->flash(); ?>
                                    <form action="otp" method="post">
 				<div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
 					<label>Please Enter the OTP Send to <?php echo $userDetail['User']['mobile_no']; ?><span></span></label>
 					<input type="text" name="data[User][token]" class="form-control" placeholder="Enter OTP">
+                                        <input type="hidden" name="data[User][id]" value="<?php echo $userDetail['User']['id']; ?>" class="form-control" placeholder="Enter OTP">
 					</div>
 					</div>
 					<div class="row">
