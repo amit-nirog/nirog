@@ -34,4 +34,3 @@ class CommonComponent extends Component {
                 
                 
 //Class End	
-?>

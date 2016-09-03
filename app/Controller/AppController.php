@@ -34,40 +34,59 @@ class AppController extends Controller {
      
       
 	//public $helpers = array('Cache', 'Html', 'Form');
-          public $components = array('Auth','Session','RequestHandler');
+  public $components = array('Auth','Session','RequestHandler');
           
 	public function beforeFilter(){
-		$this->Auth->loginAction = array( 'controller' => 'users', 'action' => 'signin');
-		$this->Auth->loginRedirect = array( 'controller' => 'users', 'action' => 'profile');
-		$this->Auth->logoutRedirect = array( 'controller' => 'users', 'action' => 'signin');
-		$this->Auth->authenticate = array( 'Form' => array( 'userModel' => 'User', 'fields' => array( 'username' => 'email', 'password' => 'password')));
-		 $this -> set('name', $this->Auth->user('first_name'));
-                 $this -> set('image', $this->Auth->user('image'));
-		$this -> set('uuid', $this->Auth->user('uuid'));
-                
-                
-                $res = $this->Auth->loggedIn();
-        
-           $this->set('loged', $res);
-           
-           
-           if(isset($this->params['admin'])){
-            $this->layout = 'admin';
-            $this->Auth->loginRedirect = array(
-                'controller'=>'users',
-                'action'=>'admin_index',
-                'admin'=>true
-            );
-           
-         
-	}
-        
-        
-        }
+		// $this->Auth->loginAction = array( 'controller' => 'users', 'action' => 'signin');
+		// $this->Auth->loginRedirect = array( 'controller' => 'users', 'action' => 'profile');
+		// $this->Auth->logoutRedirect = array( 'controller' => 'users', 'action' => 'signin');
+		// $this->Auth->authenticate = array( 'Form' => array( 'userModel' => 'User', 'fields' => array( 'username' => 'email', 'password' => 'password')));
+    $this->Auth->allow('add','view','index','search','userlogin','userlogout','changepassword','edit','captcha','index','detail','forgotpassword','home','delete','download','error','sitemap','lastlogin','personal','terms','professional');
+    $this->userInfo=$this->Session->read('User');
+    //pr($this->userInfo);
+		$this->set('userInfo',$this->userInfo);    
+    $this->set('loggedIn',(isset($this->userInfo) && !empty($this->userInfo)));
+    if(isset($this->params['admin'])){
+        $this->layout = 'admin';
+        $this->Auth->loginRedirect = array('controller'=>'users','action'=>'admin_index','admin'=>true);
+    }
+  }
 
-        
-       
-       
-   }
+  function _checkLogout(){
+        $User=$this->Session->read('User');
+        if($User) {
+            if($this->request->is('ajax')){
+                echo '<script>window.location=ABSOLUTE_URL+"users/personal"</script>';
+                exit;
+            }
+            else{//die('dd');
+            if($this->request->url!='users/login'){
+                pr($this->request->url);die;
+              }
+                $this->redirect(array('controller'=>'users','action'=>'personal'));
+            }
+        }
+  }
+
+  function _checkLogin(){
+        $User=$this->Session->read('User');
+        if(empty($User)) {
+            if($this->request->is('ajax')){
+                echo '<script>window.location=ABSOLUTE_URL+"users/signin"</script>';
+                exit;
+            }
+            else
+                $this->redirect(array('controller'=>'users','action'=>'signin'));
+        }
+  }
+
+
+  function _setUserSession($user){
+    if(!empty($user)){
+      $this->Session->write('User',$user);
+    }
+
+  }
+}
     
 

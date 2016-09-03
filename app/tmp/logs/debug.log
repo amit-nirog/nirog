@@ -1,0 +1,576 @@
+2016-08-15 14:35:13 Debug: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\wamp\www\nirog\lib\Cake\View\Helper\FormHelper.php, line 383]
+Trace:
+FormHelper::create() - CORE\Cake\View\Helper\FormHelper.php, line 383
+include - APP\View\Users\profile.ctp, line 48
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-15 14:36:13 Debug: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\wamp\www\nirog\lib\Cake\View\Helper\FormHelper.php, line 383]
+Trace:
+FormHelper::create() - CORE\Cake\View\Helper\FormHelper.php, line 383
+include - APP\View\Users\profile.ctp, line 48
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-15 14:36:45 Debug: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\wamp\www\nirog\lib\Cake\View\Helper\FormHelper.php, line 383]
+Trace:
+FormHelper::create() - CORE\Cake\View\Helper\FormHelper.php, line 383
+include - APP\View\Users\profile.ctp, line 48
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-15 14:37:48 Debug: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\wamp\www\nirog\lib\Cake\View\Helper\FormHelper.php, line 383]
+Trace:
+FormHelper::create() - CORE\Cake\View\Helper\FormHelper.php, line 383
+include - APP\View\Users\profile.ctp, line 48
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:15:11 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 157]
+Trace:
+include - APP\View\Users\personal.ctp, line 157
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:16:14 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 157]
+Trace:
+include - APP\View\Users\personal.ctp, line 157
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:18:38 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 160]
+Trace:
+include - APP\View\Users\personal.ctp, line 160
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:20:21 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 160]
+Trace:
+include - APP\View\Users\personal.ctp, line 160
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:21:40 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 160]
+Trace:
+include - APP\View\Users\personal.ctp, line 160
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:22:34 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 160]
+Trace:
+include - APP\View\Users\personal.ctp, line 160
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:23:00 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 160]
+Trace:
+include - APP\View\Users\personal.ctp, line 160
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:24:09 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 160]
+Trace:
+include - APP\View\Users\personal.ctp, line 160
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:24:51 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 160]
+Trace:
+include - APP\View\Users\personal.ctp, line 160
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:26:13 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 160]
+Trace:
+include - APP\View\Users\personal.ctp, line 160
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:26:17 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 160]
+Trace:
+include - APP\View\Users\personal.ctp, line 160
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:32:03 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 155]
+Trace:
+include - APP\View\Users\personal.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:32:57 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 155]
+Trace:
+include - APP\View\Users\personal.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:34:02 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 155]
+Trace:
+include - APP\View\Users\personal.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:34:07 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 155]
+Trace:
+include - APP\View\Users\personal.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:34:47 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 155]
+Trace:
+include - APP\View\Users\personal.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:35:31 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 155]
+Trace:
+include - APP\View\Users\personal.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:38:06 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 155]
+Trace:
+include - APP\View\Users\personal.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:40:33 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 155]
+Trace:
+include - APP\View\Users\personal.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:41:11 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 155]
+Trace:
+include - APP\View\Users\personal.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:42:33 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 158]
+Trace:
+include - APP\View\Users\personal.ctp, line 158
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:43:03 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 158]
+Trace:
+include - APP\View\Users\personal.ctp, line 158
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:43:57 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 182]
+Trace:
+include - APP\View\Users\personal.ctp, line 182
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:47:48 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 170]
+Trace:
+include - APP\View\Users\personal.ctp, line 170
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:48:13 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 170]
+Trace:
+include - APP\View\Users\personal.ctp, line 170
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:50:18 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 170]
+Trace:
+include - APP\View\Users\personal.ctp, line 170
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:50:44 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 170]
+Trace:
+include - APP\View\Users\personal.ctp, line 170
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:51:09 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 170]
+Trace:
+include - APP\View\Users\personal.ctp, line 170
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:52:29 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 170]
+Trace:
+include - APP\View\Users\personal.ctp, line 170
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 13:59:13 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 174]
+Trace:
+include - APP\View\Users\personal.ctp, line 174
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:03:00 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 171]
+Trace:
+include - APP\View\Users\personal.ctp, line 171
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:05:16 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 177]
+Trace:
+include - APP\View\Users\personal.ctp, line 177
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:07:19 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 174]
+Trace:
+include - APP\View\Users\personal.ctp, line 174
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:12:27 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 174]
+Trace:
+include - APP\View\Users\personal.ctp, line 174
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:20:10 Debug: Notice (8): Undefined index: zipcode in [C:\wamp\www\nirog\app\View\Users\personal.ctp, line 169]
+Trace:
+include - APP\View\Users\personal.ctp, line 169
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:21:45 Debug: Notice (8): Undefined variable: typeList in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 17]
+Trace:
+include - APP\View\Users\professional.ctp, line 17
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:24:18 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:24:18 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:24:18 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:24:30 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:24:30 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:24:30 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:25:28 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:25:28 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:25:28 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:26:00 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:26:00 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+
+2016-08-25 14:26:00 Debug: Notice (8): Undefined variable: userDetails in [C:\wamp\www\nirog\app\View\Users\professional.ctp, line 19]
+Trace:
+include - APP\View\Users\professional.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 111
+

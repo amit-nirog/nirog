@@ -124,7 +124,7 @@ Configure::write('App.encoding', 'UTF-8');
  * Web path to the public images directory under webroot.
  * If not set defaults to 'img/'
  */
-//Configure::write('App.imageBaseUrl', 'img/');
+Configure::write('App.imageBaseUrl', 'images/');
 
 /**
  * Web path to the CSS files directory under webroot.

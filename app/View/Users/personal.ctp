@@ -16,30 +16,27 @@
 
     <div class="container">
         <div class="row">
-            <?php echo $this->element('sidebar'); ?>
-            <?php echo $this->Session->flash(); ?>
-            <?php echo $this->Form->create(false, ['id' => 'xxx', 'url' => '/users/personal/' . $userDetails['User']['id']]); ?>
+            <?php echo $this->element('sidebar'); 
+                echo $this->element('message'); 
+             echo $this->Form->create(false, array('id' => 'personal', 'url' => array('controller'=>'users','action'=>'personal'))); ?>
             <div class="main col-md-9 col-sm-8 col-xs-12">
                 <h2>Edit Your Profile<span><a href="#">View Profile</a></span></h2>
-
-
-
 
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Name</label>
                         <input type="text" name="data[User][first_name]"  value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['first_name'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['first_name'];
                         }
                         ?>" class="form-control" />
                     </div>
-                    <input name="data[User][id]" type="hidden" value="<?php echo $userDetails['User']['id']; ?>">
+                    <input name="data[User][id]" type="hidden" value="<?php echo $userInfo['User']['id']; ?>">
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Email Address</label>
                         <input name="data[User][email]" type="email" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['email'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['email'];
                         }
                         ?>" placeholder="Email Address" class="form-control" required=""/>
                     </div>
@@ -47,8 +44,8 @@
 
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                        <label>Gender <dl><input type="radio" name="data[User][gender]" <?php if ($userDetails['User']['gender'] == "male") { ?> checked="checked" <?php } ?> value="male" /> Male</dl>
-                            <dl><input type="radio" name="data[User][gender]" <?php if ($userDetails['User']['gender'] == "female") { ?> checked="checked" <?php } ?> value="female" /> Female</dl></label>
+                        <label>Gender <dl><input type="radio" name="data[User][gender]" <?php if ($userInfo['User']['gender'] == "male") { ?> checked="checked" <?php } ?> value="male" /> Male</dl>
+                            <dl><input type="radio" name="data[User][gender]" <?php if ($userInfo['User']['gender'] == "female") { ?> checked="checked" <?php } ?> value="female" /> Female</dl></label>
                     </div>
                 </div>
 
@@ -56,8 +53,8 @@
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Mobile Number<span>*</span></label>
                         <input type="text"   id="mobile text" name="data[User][mobile_no]" maxlength="10" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['mobile_no'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['mobile_no'];
                         }
                         ?>" placeholder="Mobile Number" class="form-control" />
                         <span id="mob"></span>
@@ -77,8 +74,8 @@
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Alternate Number</label>
                         <input type="text" name="data[User][alternate_mobile_non]" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['alternate_mobile_non'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['alternate_mobile_non'];
                         }
                         ?>" placeholder="Alternate Number" id="mobile1" maxlength="10"class="form-control" />
                         <span id="mob1"></span>
@@ -90,8 +87,8 @@
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                         <label>Street Address</label>
                         <input type="text" name="data[User][address]" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['address'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['address'];
                         }
                         ?>" placeholder="Street Address" class="form-control" />
                     </div>
@@ -103,7 +100,7 @@
                         <select name="data[User][country_id]" class="form-control">
                             <option>Select Country</option>
                             <?php foreach ($countryList as $country) { ?>
-                                <option <?php if ($userDetails['User']['country_id'] == $country['Country']['id']) { ?> selected="selected" <?php } ?> value='<?php echo $country['Country']['id'] ?>' >
+                                <option <?php if ($userInfo['User']['country_id'] == $country['Country']['id']) { ?> selected="selected" <?php } ?> value='<?php echo $country['Country']['id'] ?>' >
                                     <?php echo $country['Country']['country_name']; ?>
                                 </option>
                             <?php } ?>
@@ -112,16 +109,16 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 form-group">
                         <label>City</label>
                         <input name="data[User][city]" type="text" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['city'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['city'];
                         }
                         ?>" placeholder="Enter City Name" class="form-control" />
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Locality</label>
                         <input name="data[User][locality]" type="text" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['locality'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['locality'];
                         }
                         ?>" placeholder="Enter Locality Name" class="form-control" />
                     </div>
@@ -131,16 +128,16 @@
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>State/Province/Region</label>
                         <input name="data[User][state]" type="text" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['state'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['state'];
                         }
                         ?>" placeholder="State/Province/Region" class="form-control" />
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Zip/Postal Code</label>
                         <input name="data[User][zipcode]" type="text" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['zipcode'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['zipcode'];
                         }
                         ?>" placeholder="Zip/Postal Code" class="form-control" />
                     </div>
@@ -158,8 +155,8 @@
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Date of Birth</label>
                         <input id="datepicker" name="data[User][date_of_birth]" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['date_of_birth'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['date_of_birth'];
                         }
                         ?>" placeholder="dd/mm/yy" class="form-control" />
                         <span class="add-on">
@@ -172,8 +169,8 @@
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Website </label>
                         <input type="text" name="data[User][website]" value="<?php
-                        if (!empty($userDetails)) {
-                            echo $userDetails['User']['website'];
+                        if (!empty($userInfo)) {
+                            echo $userInfo['User']['website'];
                         }
                         ?>" placeholder="Enter URL" class="form-control" />
                     </div>
@@ -183,16 +180,16 @@
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Short Introduction</label>
                         <textarea rows="" cols=""  name="data[User][short_desc]" class="form-control" placeholder="Short Introduction"><?php
-                            if (!empty($userDetails)) {
-                                echo $userDetails['User']['short_desc'];
+                            if (!empty($userInfo)) {
+                                echo $userInfo['User']['short_desc'];
                             }
                             ?></textarea>
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>General Description</label>
                         <textarea rows="" cols="" name="data[User][general_desc]" class="form-control" placeholder="General Description"><?php
-                            if (!empty($userDetails)) {
-                                echo $userDetails['User']['general_desc'];
+                            if (!empty($userInfo)) {
+                                echo $userInfo['User']['general_desc'];
                             }
                             ?></textarea>
                     </div>

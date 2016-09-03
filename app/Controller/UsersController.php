@@ -6,18 +6,20 @@ class UsersController extends AppController {
     public $uses = array("User", "Country", "State", "City", "Location", "Collage", "Degree", "DoctorType", "Board", "Professional","Token");
     var $components = array('Session', 'Auth', 'Common');
 
-    function beforeFilter() {
+    //function beforeFilter() {
         // tell Auth not to check authentication when doing the 'register' action
 
-        $this->Auth->allow('register', 'login', 'signin', 'logout', 'otp', 'admin_index', 'clinicregister', 'regdelete');
-        parent::beforeFilter();
-    }
+        //$this->Auth->allow('register', 'login', 'signin', 'logout', 'otp', 'admin_index', 'clinicregister', 'regdelete');
+        //parent::beforeFilter();
+    //}
 
     public function admin_index() {
         $this->layout = "admin";
     }
 
     public function register() {
+        $this->_checkLogout();
+
         if ($this->request->is('post')) {
             $countUseremail = $this->User->find('count', array('conditions' => array('User.email' => $this->request->data['User']['email'])));
             $countUserReg = $this->User->find('count', array('conditions' => array('User.mobile_no' => $this->request->data['User']['mobile_no'])));
@@ -108,11 +110,11 @@ class UsersController extends AppController {
     }
 
     public function login() {
-        
+        $this->_checkLogout();
     }
 
-    public function personal($id = "") {
-
+    public function personal() {
+        $this->_checkLogin();
         $locationList = $this->Location->getLocationList();
         $cityList = $this->City->getcityList();
         $stateList = $this->State->getStateList();
@@ -130,26 +132,23 @@ class UsersController extends AppController {
         $this->set('degreeList', $degreeList);
         $this->set('typeList', $typeList);
         $this->set('collageList', $collageList);
-        $ids = $this->Auth->user('id');
-        $this->request->data['User']['id'] = $id;
+        $this->request->data['User']['id'] = $this->userInfo['User']['id'];
 
         if ($this->request->is('post')) {
-            if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__("Edit Successfully."), 'success');
+            if ($this->User->save($this->data)) {
+                $this->_setUserSession(array_merge($this->data,$this->userInfo));
+
+                $this->Session->setFlash(__("Profile updated successfully!"), 'success');
                 $this->redirect(array('controller' => 'users', 'action' => 'personal'));
             } else {
                 $this->Session->setFlash(__("Sorry !! technical issue"), 'error');
             }
         }
-        $userDetail = $this->User->find('first', array(
-            'conditions' => array('User.id' => $ids)
-        ));
-        // print_r($userDetail);
-        $this->set('userDetails', $userDetail);
+        
     }
 
-    public function professional($id = "") {
-
+    public function professional() {
+        $this->_checkLogin();
         $typeList = $this->DoctorType->gettypeList();
         $this->set('typeList', $typeList);
         $boardList = $this->Board->getboardList();
@@ -157,11 +156,8 @@ class UsersController extends AppController {
         $degreeList = $this->Degree->getdegreeList();
         $this->set('degreeList', $degreeList);
 
-        $ids = $this->Auth->user('id');
-
-        $userDetail = $this->Professional->find('first', array(
-            'conditions' => array('Professional.user_id' => $ids)
-        ));
+        
+        $userDetail = $this->Professional->find('first', array('conditions' => array('Professional.user_id' => $this->userInfo['User']['id'])));
         $this->set('userDetails', $userDetail);
         if ($this->request->is('post')) {
             $this->request->data['Professional']['id'] = $userDetail['Professional']['id'];
@@ -170,7 +166,7 @@ class UsersController extends AppController {
                 $this->Session->setFlash(__("Edit Successfully."), 'success');
                 $this->redirect(array('controller' => 'users', 'action' => 'professional'));
             } else {
-                $this->Session->setFlash(__("Sorry !! technical issue"), 'error');
+                $this->Session->setFlash(__("Something went wrong"), 'error');
             }
         }
     }
@@ -305,16 +301,8 @@ class UsersController extends AppController {
     }
 
     public function signin() {
+        $this->_checkLogout();
         
-        $User=$this->Session->read('User');
-        if($User) {
-            if($this->request->is('ajax')){
-                echo '<script>window.location=ABSOLUTE_URL+"pages/home"</script>';
-                exit;
-            }
-            else
-                $this->redirect(array('controller'=>'pages','action'=>'home'));
-        }
         if (!empty($this->data))
         {
             //pr($this->data);die;
@@ -322,11 +310,12 @@ class UsersController extends AppController {
             $users = $this->User->find('first',array('conditions' => array('OR'=>array('User.email'=>trim($this->data['User']['email']),'User.mobile_no'=>trim($this->data['User']['email'])),'User.password'=>$encryptedPassword,'User.status'=>'1'),'recursive'=>'-1'));
             //pr($users);die;
             if($users){
-                $this->Session->write('User',$users);
+                $this->_setUserSession($users);
                 $this->redirect(array('controller' => 'users', 'action' => 'personal'));
             }else{
                 $this->data=array();
                 $this->Session->setFlash('Please enter correct email and password.', 'error');
+
             }           
         }
         

@@ -1,7 +1,14 @@
 <div class="left-sidebar col-md-3 col-sm-4 col-xs-12">
     <?php echo $this->Form->create('User', array('type' => 'file', 'url' => 'uploadimg')); ?>
 
-    <div class="img"><img style="height:120px; width:120px;" src="<?php echo PROFILE_URL . '/' . $userDetails['User']['image']; ?>" class="proimg" />
+    <div class="img">
+        <?php if($userInfo['User']['image']!=''){
+            echo $this->Html->image(PROFILE_URL.$userInfo['User']['image'],array('class'=>'proimg','style'=>'height:120px; width:120px;'));
+        }else{
+            echo $this->Html->image('default-user.jpg',array('class'=>'proimg','style'=>'height:120px; width:120px;'));
+        }
+            ?>
+        
 
         <input id="upload" name="data[User][image]" class="img" type="file"/>
         <a href="" id="upload_link">Add Profile Pictures<span>*</span></a>

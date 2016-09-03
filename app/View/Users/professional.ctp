@@ -30,7 +30,7 @@
 
             <?php echo $this->element('sidebar'); ?>
             <?php echo $this->Session->flash(); ?>
-            <?php echo $this->Form->create(false, ['id' => 'xxx', 'url' => '/users/professional/' . $userDetails['User']['id']]); ?>
+            <?php echo $this->Form->create(false, array('id' => 'professional', 'url' => 'professional')); ?>
             <div class="main col-md-9 col-sm-8 col-xs-12">
                 <h2>Edit Your Profile<span><a href="#">View Profile</a></span></h2>
                 <div class="row">

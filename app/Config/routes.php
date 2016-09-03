@@ -32,7 +32,7 @@ Router::connect('/doctor-register', array('controller' => 'Users', 'action' => '
 Router::connect('/clinic-register', array('controller' => 'Users', 'action' => 'clinicregister'));
 Router::connect('/profile', array('controller' => 'Users', 'action' => 'personal'));
 Router::connect('/document', array('controller' => 'Users', 'action' => 'document'));
-Router::connect('/', array('controller' => 'Users', 'action' => 'login'));
+Router::connect('/', array('controller' => 'Pages', 'action' => 'home'));
 Router::connect('/dashboard', array('controller' => 'users', 'action' => 'index', 'prefix'=>"admin"));
 Router::connect('/signin', array('controller' => 'Users', 'action' => 'signin'));
 

@@ -1,7 +1,6 @@
   
 <main class="o-content position-rel_40"> 
     <div class="container">
-        <?php if ($loged == false) { ?>
             <div class="login-wrapper">
                 <div class="col-lg-6 col-sm-12">
                     <h1> Why You Will Love Nirog Street</h1>
@@ -56,9 +55,7 @@
                     </div>
                 </div>
             </div>
-        <?php } else { ?>
-            <div class="right" style="margin-top: 100px;">Yor already logedin  <li><a href="<?php echo $this->Html->url(array('controller' => 'Users', 'action' => 'logout')); ?>" class="active">Logout</a></li> </div>
-                <?php } ?>
+        
     </div>
 </main>
 
