@@ -435,6 +435,7 @@ public function changenumber($id=""){
     }
 
     public function signin() {
+
         //debug($this->Auth->login()); die();
         if (!empty($this->request->data)) {
             $this->Auth->login();
@@ -454,10 +455,41 @@ public function changenumber($id=""){
                 $this->redirect(array('controller' => 'users', 'action' => 'clinicdetail'));
             }
             } else {
-                $this->Session->setFlash('Please enter correct email and password.', 'error');
-                $this->redirect(array('controller' => 'users', 'action' => 'signin'));
+
+        
+        $User=$this->Session->read('User');
+        if($User) {
+            if($this->request->is('ajax')){
+                echo '<script>window.location=ABSOLUTE_URL+"pages/home"</script>';
+                exit;
             }
+            else
+                $this->redirect(array('controller'=>'pages','action'=>'home'));
         }
+        if (!empty($this->data))
+        {
+            //pr($this->data);die;
+            $encryptedPassword =Security::hash(Configure::read('Security.salt') . trim($this->data['User']['password']));
+            $users = $this->User->find('first',array('conditions' => array('OR'=>array('User.email'=>trim($this->data['User']['email']),'User.mobile_no'=>trim($this->data['User']['email'])),'User.password'=>$encryptedPassword,'User.status'=>'1'),'recursive'=>'-1'));
+            //pr($users);die;
+            if($users){
+                $this->Session->write('User',$users);
+                $this->redirect(array('controller' => 'users', 'action' => 'personal'));
+            }else{
+                $this->data=array();
+
+                $this->Session->setFlash('Please enter correct email and password.', 'error');
+            }           
+        }
+        
+    }
+
+
+        
+    function userlogout()
+    {
+        $this->Session->delete('User');
+        $this->redirect(array('controller'=>'pages','action'=>'home','plugin'=>false));
     }
 
     public function logout() {
