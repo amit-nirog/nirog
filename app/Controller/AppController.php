@@ -32,8 +32,9 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
      
-      
-	//public $helpers = array('Cache', 'Html', 'Form');
+     var $helpers = array('Html', 'Form');
+    public $uses = array("User", "Country", "State", "City", "Location", "Collage","Token", "Degree", "DoctorType", "Board", "Professional","Token");
+    
           public $components = array('Auth','Session','RequestHandler');
           
 	public function beforeFilter(){
@@ -42,6 +43,7 @@ class AppController extends Controller {
 		$this->Auth->logoutRedirect = array( 'controller' => 'users', 'action' => 'signin');
 		$this->Auth->authenticate = array( 'Form' => array( 'userModel' => 'User', 'fields' => array( 'username' => 'email', 'password' => 'password')));
 		 $this -> set('name', $this->Auth->user('first_name'));
+     $this -> set('user_type', $this->Auth->user('user_type'));
                  $this -> set('image', $this->Auth->user('image'));
 		$this -> set('uuid', $this->Auth->user('uuid'));
                 
@@ -61,9 +63,22 @@ class AppController extends Controller {
            
          
 	}
-        
+        $ids = $this->Auth->user('id');
+        $userDetail = $this->User->find('first', array(
+            'conditions' => array('User.id' => $ids,'User.user_type' => 1)
+        ));
+        // print_r($userDetail);
+        $this->set('userDetails', $userDetail);
+       $clinicDetail = $this->User->find('first', array(
+            'conditions' => array('User.id' => $ids,'User.user_type' => 2)
+        ));
+        // print_r($userDetail);
+        $this->set('clinicDetails', $clinicDetail);
         
         }
+
+
+
 
         
        

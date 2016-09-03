@@ -16,6 +16,7 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
             <?php echo $this->element('sidebar'); ?>
             <?php echo $this->Session->flash(); ?>
             <?php echo $this->Form->create(false, ['id' => 'xxx', 'url' => '/users/personal/' . $userDetails['User']['id']]); ?>
@@ -208,7 +209,7 @@
             <?php echo $this->Form->end(); ?>
         </div>
     </div>
-
+</div>
 </section>
 
 <script>

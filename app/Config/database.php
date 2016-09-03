@@ -71,7 +71,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => '',
+		'password' => 'root',
 		'database' => 'nirog_2016',
 		'prefix' => 'nrs_',
 		//'encoding' => 'utf8',
