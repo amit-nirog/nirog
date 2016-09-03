@@ -1,0 +1,2 @@
+msgid "Registration Success"
+msgstr "You have registered successfully."

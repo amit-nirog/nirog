@@ -32,7 +32,7 @@
                                 <label>E-Mail Address</label>
                                 <?php echo $this->Form->input('User.email', array('type' => 'email', 'id' => 'username', 'class' => "form-control input-block-level txtfield required", 'autocomplete' => "off", "placeholder" => "Username - Email", 'tabindex' => '3', "label" => false)); ?>	
                             </div>
-                            <input name="data[User][id]" value="2" type="hidden">
+                            
                             <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                                 <label>Password</label>
                                 <?php echo $this->Form->input('User.password', array('type' => 'password', 'id' => 'passwrd', 'class' => "form-control input-block-level txtfield required", 'minlength' => 6, 'maxlength' => 20, 'autocomplete' => "off", "placeholder" => "Password", 'tabindex' => '5', "label" => false)); ?>

@@ -36569,3 +36569,234 @@ Request URL: /nirogstreet/nirog/fonts/open-sans-bold.woff
 Stack Trace:
 #0 C:\wamp\www\nirogstreet\nirog\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-09-03 16:03:22 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [/var/www/projects/nirog/nirog/app/Controller/UsersController.php, line 341]
+2016-09-03 16:03:22 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /nirog/nirog/signin
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/projec...', 341)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/projec...', 341, Array)
+#2 /var/www/projects/nirog/nirog/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/projec...', 341, Array)
+#3 /var/www/projects/nirog/nirog/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-03 16:03:22 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:03:22 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:03:39 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /nirog/nirog/signin
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/projects/nirog/nirog/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/projects/nirog/nirog/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /var/www/projects/nirog/nirog/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /var/www/projects/nirog/nirog/lib/Cake/Model/Model.php(3653): Model->setSource('users')
+#5 /var/www/projects/nirog/nirog/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /var/www/projects/nirog/nirog/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /var/www/projects/nirog/nirog/lib/Cake/View/Helper/FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/projects/nirog/nirog/app/View/Users/signin.ctp(29): FormHelper->create('User', Array)
+#9 /var/www/projects/nirog/nirog/lib/Cake/View/View.php(971): include('/var/www/projec...')
+#10 /var/www/projects/nirog/nirog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/projec...', Array)
+#11 /var/www/projects/nirog/nirog/lib/Cake/View/View.php(473): View->_render('/var/www/projec...')
+#12 /var/www/projects/nirog/nirog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#13 /var/www/projects/nirog/nirog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /var/www/projects/nirog/nirog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-09-03 16:03:40 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:03:40 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:04:02 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'nirog_2016\'',
+  'enabled' => true,
+)
+Request URL: /nirog/nirog/signin
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/projects/nirog/nirog/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/projects/nirog/nirog/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /var/www/projects/nirog/nirog/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /var/www/projects/nirog/nirog/lib/Cake/Model/Model.php(3653): Model->setSource('users')
+#5 /var/www/projects/nirog/nirog/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /var/www/projects/nirog/nirog/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /var/www/projects/nirog/nirog/lib/Cake/View/Helper/FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/projects/nirog/nirog/app/View/Users/signin.ctp(29): FormHelper->create('User', Array)
+#9 /var/www/projects/nirog/nirog/lib/Cake/View/View.php(971): include('/var/www/projec...')
+#10 /var/www/projects/nirog/nirog/lib/Cake/View/View.php(933): View->_evaluate('/var/www/projec...', Array)
+#11 /var/www/projects/nirog/nirog/lib/Cake/View/View.php(473): View->_render('/var/www/projec...')
+#12 /var/www/projects/nirog/nirog/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#13 /var/www/projects/nirog/nirog/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /var/www/projects/nirog/nirog/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-09-03 16:04:02 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:04:02 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:04:21 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:04:21 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:04:28 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:04:28 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:05:03 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:05:03 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:15:54 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:16:44 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:16:44 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:17:07 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:17:07 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:17:09 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-normal.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-03 16:17:09 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /nirog/nirog/fonts/open-sans-bold.woff
+Stack Trace:
+#0 /var/www/projects/nirog/nirog/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
