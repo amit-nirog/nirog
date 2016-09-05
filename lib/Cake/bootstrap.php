@@ -76,7 +76,7 @@ if (!defined('JS')) {
  * Path to the public images directory.
  */
 if (!defined('IMAGES')) {
-	define('IMAGES', WWW_ROOT . 'img' . DS);
+	define('IMAGES', WWW_ROOT . 'images' . DS);
 }
 
 /**
