@@ -43,7 +43,7 @@ class AppController extends Controller {
 		// $this->Auth->loginRedirect = array( 'controller' => 'users', 'action' => 'profile');
 		// $this->Auth->logoutRedirect = array( 'controller' => 'users', 'action' => 'signin');
 		// $this->Auth->authenticate = array( 'Form' => array( 'userModel' => 'User', 'fields' => array( 'username' => 'email', 'password' => 'password')));
-    $this->Auth->allow('add','view','index','search','userlogin','userlogout','changepassword','edit','captcha','index','detail','forgotpassword','home','delete','download','error','sitemap','lastlogin','personal','terms','professional');
+    $this->Auth->allow('add','view','index','search','signin','userlogin','userlogout','changepassword','edit','captcha','index','detail','forgotpassword','home','delete','download','error','sitemap','lastlogin','personal','terms','professional');
     $this->userInfo=$this->Session->read('User');
     //pr($this->userInfo);
 		$this->set('userInfo',$this->userInfo);    

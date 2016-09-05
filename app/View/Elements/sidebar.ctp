@@ -25,7 +25,7 @@
     </div>
     <?php echo $this->Form->end(); ?>
 
-    <?php if($user_type==1){ ?>
+    <?php if($userInfo['User']['user_type']==1){ ?>
     <ul>
         <li><a href="<?php echo $this->Html->url('/', true) ?>users/personal" <?php if($this->request->params['action']=="personal"){ ?> class="active" <?php } ?> ><i class="fa fa-user"></i> Personal Information</a></li>
         <li><a href="<?php echo $this->Html->url('/', true) ?>users/professional"  <?php if($this->request->params['action']=="professional"){ ?> class="active" <?php } ?>><i class="fa fa-user"></i> Porfessional Information</a></li>

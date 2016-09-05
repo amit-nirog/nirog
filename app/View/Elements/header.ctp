@@ -23,12 +23,16 @@
             <?php }?>
             </div>
             
-
-            <?php } else { ?>
-                    <img src="<?php echo PROFILE_URL . '/' . $image; ?>" class="profile-img  img-round" height="50" /></div>
-            <?php } ?>
-           
-
+            <!--            <ul>
+            <?php //if ($loged == true) {  ?>
+                                <li><a href="<?php //echo $this->Html->url(array('controller' => 'Users', 'action' => 'logout')); ?>" class="active">Logout</a></li>
+                                <li><a href="<?php //echo $this->Html->url(array('controller' => 'Users', 'action' => 'profile'));  ?>" class="active">Profile</a></li>
+            <?php //} else {  ?>
+                                <li><a href="<?php //echo $this->Html->url(array('controller' => 'Users', 'action' => 'signin')); ?>" class="active">Login</a></li>
+                                <li><a href="<?php //echo $this->Html->url(array('controller' => 'Users', 'action' => 'register'));  ?>" class="active">Register</a></li>
+<?php // }  ?>
+            
+                        </ul>-->
         </div>
     </div>
 </header>
