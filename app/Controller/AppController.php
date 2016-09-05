@@ -32,8 +32,10 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
      
+
       
-	//public $helpers = array('Cache', 'Html', 'Form');
+	var $helpers = array('Html', 'Form');
+  public $uses = array("User", "Country", "State", "City", "Location", "Collage","Token", "Degree", "DoctorType", "Board", "Professional","Token");
   public $components = array('Auth','Session','RequestHandler');
           
 	public function beforeFilter(){
@@ -86,7 +88,8 @@ class AppController extends Controller {
       $this->Session->write('User',$user);
     }
 
+
   }
 }
-    
+
 

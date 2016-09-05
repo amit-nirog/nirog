@@ -56,7 +56,8 @@ max-width:100%;
     border-left: 22px solid #86c22e;
     position: absolute;
     content: "";
-    right: -7px;
+    right: -22px;
+    top: 1px;
     z-index: 2;
 }
 .content .left-sidebar .img{
@@ -364,3 +365,111 @@ bottom:10px;
 right:26px;
 }
 .error{color:red}
+
+
+
+/* css by ananad sir */
+
+@charset "utf-8";
+/* CSS Document */
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
+
+body * {
+    font-family: 'Open Sans', sans-serif ;
+}
+a { color:#43b5ff; cursor:pointer}
+.navbar-default{background:#fff; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+.navbar-brand{height:75px; padding:10px 15px}
+.navbar-nav{margin-top:25px;}
+.navbar-nav>li>a.first{ border-right:1px solid #d4d4d4}
+.navbar-default .nav>li>a{ padding:0px 15px!important; color:#85c224!important; font-weight:600}
+.navbar-default .nav>li>a.active{ color:#000!important}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{color:#000!important}
+.login-wrapper{margin-top:65px}
+.login-wrapper h1{ color:#2a7bcc; font-size:36px;  margin-bottom:15px; text-align:center}
+.nirog-details ul li{ list-style-type:none; padding-left:25px; margin-bottom:15px; color:#888888}
+.nirog-details ul li.path{ background:url(../image/path.png) no-repeat 0px 3px;}
+.nirog-details ul li.information{ background:url(../image/information.png) no-repeat 0px 3px;}
+.nirog-details ul li.chat{ background:url(../image/chat.png) no-repeat 0px 3px;}
+.nirog-details ul li.bell-ring-alarm{ background:url(../image/bell-ring-alarm.png) no-repeat 0px 3px;}
+.nirog-details ul li.calendar{ background:url(../image/calendar.png) no-repeat 0px 3px;}
+.half-border{border-bottom:2px solid #86c22e; width:80%; margin-left:10%; margin-top:30px; height:2px; line-height:2px; clear:both; margin-bottom:30px;}
+.login-tab{ border:1px solid #d4d4d4; border-radius:5px; padding:20px; }
+.login-tab .nav>li>a{ padding:0px 10px!important;}
+.login-tab .nav-tabs>li>a{ margin-bottom:10px; font-weight:600; color:#85c224; border-right:1px solid #d4d4d4;}
+.login-tab .nav-tabs>li.active>a, .login-tab .nav-tabs>li.active>a:focus, .login-tab .nav-tabs>li.active>a:hover { border-top: 0; border-left: 0; border-radius: 0px; color:#000}
+.login-tab .forget{ font-weight:400; }
+.padd-left0{ padding-left:0px!important}
+.padd-right0{padding-right:0px!important;}
+.login-tab .btn-success{ width:100%; background:#86c22e!important; text-align:center; font-size:14px; }
+.login-tab .or-text{ border-bottom:1px solid #d4d4d4; line-height:1px; text-align:center; width:100%; height:0px; margin:30px 0;}
+.login-tab .or-text span{background: #fff!important;padding: 20px;}
+.login-tab .btn-facebook { background:#3f64ac; border:1px solid #3f64ac; border-radius:2px; padding:8px 15px; font-size:11px; color:#fff; text-align:center; width:32%!important; cursor:pointer }
+.login-tab i.fa.fa-facebook {font-size: 15px;float: left; margin-left: 10px;}
+.login-tab .btn-linkedin { background:#2a7bcc; border:1px solid #2a7bcc; border-radius:2px; padding:8px 15px; font-size:11px; color:#fff; text-align:center; width:32%!important; margin-left:1.333%; cursor:pointer} 
+.login-tab i.fa.fa-linkedin {font-size: 15px;float: left; margin-left: 10px;}
+.login-tab .btn-google { background:#db4c4c; border:1px solid #db4c4c; border-radius:2px; padding:8px 15px; font-size:11px; color:#fff; text-align:center; width:32%!important; margin-left:1.333%; cursor:pointer} 
+.login-tab i.fa-google-plus {font-size: 15px;float: left; margin-left: 10px;}
+.registration-container{ border-bottom:1px solid #d4d4d4; margin-top:15px; padding-bottom:15px;}
+.registration-container .clinic-title{ font-weight:600; }
+.registration-container .doctor-title{ font-weight:600; color:#86c22e}
+.clinic-register{ margin-top:15px;}
+
+/*doc profile for user */
+.breadcrumb{ background:transparent; padding:8px 0px;}
+.doc-profile-content-wrapper{ border:1px solid #b4b4b4; border-radius:5px; padding:15px 0px; color:#888}
+.profile-img{ width:50px; height:50px; border:1px solid #b4b4b4}
+.img-height{ height:400px;}
+.doc-profile-content-wrapper h1{ font-size:24px; margin-top:0px; margin-bottom:0px; color:#000;}
+.doc-profile-content-wrapper h1 span{ font-size:13px; color:#43b5ff; font-weight:600}
+.doc-detail p.degree{ margin-top:5px; margin-bottom:0px; font-weight:400}
+.doc-detail p.title{ margin-top:0px;}
+.share-profile{ line-height:15px; font-weight:600}
+.share-profile .fa{ font-size:35px; margin-left:10px;}
+.share-profile .fa-facebook-official{ color:#2a66ad}
+.share-profile .fa-twitter-square{ color:#00c4ff}
+.share-profile .fa-google-plus-square{ color:#ff1717}
+.share-profile .fa-linkedin-square{ color:#009dff}
+.share-profile .fa-whatsapp{ color:#22b100}
+.profile-details{ margin-top:20px}
+.profile-details .nav>li>a{ padding:0px!important;}
+.profile-details .nav-tabs>li>a{ font-weight:600; color:#888; margin-left:15px; }
+.profile-details .nav-tabs>li.active>a, .login-tab .nav-tabs>li.active>a:focus, .login-tab .nav-tabs>li.active>a:hover { border-top: 0; border-left: 0;  border-right:0px; border-radius: 0px; color:#86c22e; border-bottom:5px solid #86c22e}
+.profile-details .clinic-info { padding:20px 15px;}
+.profile-details span.title-font{ color:#000; font-weight:600}
+.profile-details .title{ color:#000; font-weight:600; font-size:16px}
+.profile-details p.rating{margin-top:10px;}
+.profile-details a.appointment-btn{ background:#43b5ff; padding:15px 10px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); color:#fff; font-size:18px; margin-top:110px; }
+.profile-details a.appointment-btn img{ margin-right:10px;}
+.ln{ border-bottom:1px solid #b4b4b4; width:100%; height:1px; line-height:1px; clear:both; margin:25px 0}
+.clinic-serices a.viewall{ font-size:bold; color:#86c22e}
+.profile-details ul { margin-top:10px; padding-left:25px;}
+.profile-details ul li{ list-style-image:url(../image/list-img.png); padding-left:10px;}
+
+/*clinic general information*/
+.general-information .clinic-image { text-align:center}
+.general-information .clinic-image img{ width:110px; height:110px; border:1px solid #b4b4b4; margin-bottom:10px;}
+.general-information .clinic-image a.add-img{ font-size:10px; width:100%; float:left;}
+.general-information .left-menu ul{ margin-left:0; padding-left:0; margin-top:20px;}
+.general-information .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{background-color: #86c22e; color:#fff}
+.general-information .nav-stacked>li+li {margin-top: 2px; margin-left: 0; border-bottom: 1px solid #d4d4d4;}
+.general-information .nav-pills>li>a {border-radius: 0px;color: #262626;}
+.general-information .nav>li{top:15px;}
+.general-information  .nav>li>a>img { margin-right:10px;}
+.general-information h1{ font-size:25px; color:#d4d4d4; }
+.general-information h1 a.view{ font-size:14px; margin-top:10px; color:#86c22e; font-weight:400}
+form.inormation{ margin-top:15px;}
+form.inormation .btn-success{ width:100%; background:#86c22e;}
+.general-information  i.fa.fa-plus-square-o {font-size: 25px; margin-left: 5px; color: #86c22e; }
+.general-information .small-btn{width:65%!important}
+.general-information .add-product{ margin-top:10px;}
+.general-information .add-product ul li{ list-style-type:none; padding:3px 7px; border:1px solid #888; display:inline; float: left;
+    margin: 0px 5px 10px; border-radius:5px;}
+
+.footer{ border-top:1px solid #d4d4d4; padding-top:10px; margin-top:65px}
+.footer ul li { list-style-type:none; display:inline-block; padding:2px 15px 2px 0px;}
+.footer ul li a{ color:#888888;}
+.footer ul{padding-left:0px;}
+.footer-bottom{ font-size:11px; color:#888;}

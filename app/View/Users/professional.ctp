@@ -27,7 +27,7 @@
 
     <div class="container">
         <div class="row">
-
+<div class="col-lg-8 col-lg-offset-2">
             <?php echo $this->element('sidebar'); ?>
             <?php echo $this->Session->flash(); ?>
             <?php echo $this->Form->create(false, array('id' => 'professional', 'url' => 'professional')); ?>
@@ -313,6 +313,7 @@
             <?php echo $this->Form->end(); ?>
         </div>
     </div>
+</div>
 </section>
 <?php echo $this->Html->script('knockout-3.4.0'); ?>
 <script type="text/javascript">

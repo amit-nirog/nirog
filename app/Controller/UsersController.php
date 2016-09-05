@@ -3,15 +3,18 @@
 class UsersController extends AppController {
 
     var $helpers = array('Html', 'Form');
-    public $uses = array("User", "Country", "State", "City", "Location", "Collage", "Degree", "DoctorType", "Board", "Professional","Token");
+    public $uses = array("User", "Country", "State", "City", "Location", "Collage", "Degree", "DoctorType","ClinicImage", "Board", "Professional","Token");
     var $components = array('Session', 'Auth', 'Common');
 
     //function beforeFilter() {
         // tell Auth not to check authentication when doing the 'register' action
 
+
         //$this->Auth->allow('register', 'login', 'signin', 'logout', 'otp', 'admin_index', 'clinicregister', 'regdelete');
         //parent::beforeFilter();
     //}
+
+
 
     public function admin_index() {
         $this->layout = "admin";
@@ -56,6 +59,53 @@ class UsersController extends AppController {
             }
         }
     }
+  
+
+  public function clinicimage() { 
+ $ids = $this->Auth->user('id');
+         $user = $this->User->find('first', array('conditions' => array('User.id' => $this->Auth->user('id'))));
+        if ($this->request->is('post')) {
+           $this->request->data['ClinicImage']['user_id'] = $user['User']['id'];
+
+  // Image Handling code START //////
+   
+$data = array();
+
+if( !empty($this->request->data['ClinicImage']['clinic_image']['name'])){
+  $filesCount = count($this->request->data['ClinicImage']['clinic_image']['name']);
+for($i = 0; $i < $filesCount; $i++){
+
+ $this->request->data['ClinicImage']['clinic_image']['name'] = $this->request->data['ClinicImage']['clinic_image']['name'][$i];
+
+
+}
+
+
+}
+
+exit();
+
+
+
+
+
+    // Image Handling code END //////   
+
+    if ($this->ClinicImage->save($this->request->data)) 
+    {
+    $this->Session->setFlash('Your post has been saved.');
+    $this->redirect(array('action' => 'index'));
+   }
+   else 
+   {
+    $this->Session->setFlash('Unable to add your post.');
+   }
+  }
+ }
+
+
+
+
 
     public function clinicregister() {
         if ($this->request->is('post')) {
@@ -94,9 +144,9 @@ class UsersController extends AppController {
             'conditions' => array('User.id' => $id)
         ));
         $tokens = $this->Token->find('first', array(
-            'conditions' => array('Token.user_id' => $id)
-        ));
-        $this->set('userDetail', $userDetail);
+        'conditions' => array('user_id' => $id), 
+        'order' => 'Token.created DESC','limit'=>1));
+         $this->set('userDetail', $userDetail);
         if ($this->request->is('post')) {
             $this->request->data['User']['status'] = 1;
             if ($tokens['Token']['token'] == $this->request->data['User']['token']) {
@@ -108,6 +158,51 @@ class UsersController extends AppController {
             }
         }
     }
+public function changenumber($id=""){
+  $id = $this->Session->read('lastid');
+        $userDetail = $this->User->find('first', array(
+            'conditions' => array('User.id' => $id)
+        ));
+        $tokens = $this->Token->find('first', array(
+            'conditions' => array('Token.user_id' => $id)
+        ));
+        $this->set('userDetail', $userDetail);
+
+
+
+ if ($this->request->is('post')) {
+           
+            $countUserReg = $this->User->find('count', array('conditions' => array('User.mobile_no' => $this->request->data['User']['mobile_no'])));
+            $mono = $this->request->data["User"]['mobile_no'];
+            if ($countUserReg < 1) {
+           
+                    $responOPT = $this->Common->generatedOTP($mono);
+                    $Result['OPT'] = $responOPT;
+                    $this->request->data['User']['id'] = $id;
+                    $this->request->data['User']['mobile_no'] =$this->request->data['User']['mobile_no'];
+                    $this->request->data['User']['token'] = $Result['OPT'];
+                    print_r($this->request->data);
+                    if ($this->User->save($this->request->data)) {
+                        $this->request->data['Token']['user_id'] = $id;
+                        $this->request->data['Token']['mobile_no'] = $this->request->data['User']['mobile_no'];
+                        $this->request->data['Token']['token'] = $Result['OPT']; 
+                        $this->request->data['User']['token'] = $Result['OPT'];
+                        $this->Token->save($this->request->data);
+                        $this->Session->setFlash(__("Save Successfully."), 'success');
+                        //exit();
+                        $this->redirect(array('controller' => 'users', 'action' => 'otp'));
+                    } else {
+                        $this->Session->setFlash(__("Sorry !! technical issue"), 'error');
+                    }
+                
+                } else {
+
+                $this->Session->setFlash('Mobile Number already exists Please, enter other mobile number.', 'error');
+          
+          }
+      }
+  }
+    
 
     public function login() {
         $this->_checkLogout();
@@ -145,10 +240,60 @@ class UsersController extends AppController {
             }
         }
         
+
     }
+
+
+    public function clinicdetail($id = "") {
+
+        $locationList = $this->Location->getLocationList();
+        $cityList = $this->City->getcityList();
+        $stateList = $this->State->getStateList();
+        $countryList = $this->Country->geCountryList();
+        $boardList = $this->Board->getboardList();
+        $degreeList = $this->Degree->getdegreeList();
+        $typeList = $this->DoctorType->gettypeList();
+        $collageList = $this->Collage->getcollageList();
+
+        $this->set('countryList', $countryList);
+        $this->set('stateList', $stateList);
+        $this->set('cityList', $cityList);
+        $this->set('locationList', $locationList);
+        $this->set('boardList', $boardList);
+        $this->set('degreeList', $degreeList);
+        $this->set('typeList', $typeList);
+        $this->set('collageList', $collageList);
+        $ids = $this->Auth->user('id');
+        $this->request->data['User']['id'] = $id;
+
+        if ($this->request->is('post')) {
+            if ($this->User->save($this->request->data)) {
+                $this->Session->setFlash(__("Edit Successfully."), 'success');
+                $this->redirect(array('controller' => 'users', 'action' => 'personal'));
+            } else {
+                $this->Session->setFlash(__("Sorry !! technical issue"), 'error');
+            }
+        }
+        $clinicDetail = $this->User->find('first', array(
+            'conditions' => array('User.id' => $ids,'User.user_type' => 2)
+        ));
+        // print_r($userDetail);
+        $this->set('clinicDetails', $clinicDetail);
+
+    }
+   
+
+
+    
+
+   public function clinicservices(){
+
+   }
 
     public function professional() {
         $this->_checkLogin();
+
+
         $typeList = $this->DoctorType->gettypeList();
         $this->set('typeList', $typeList);
         $boardList = $this->Board->getboardList();
@@ -302,7 +447,7 @@ class UsersController extends AppController {
 
     public function signin() {
         $this->_checkLogout();
-        
+
         if (!empty($this->data))
         {
             //pr($this->data);die;
@@ -314,6 +459,7 @@ class UsersController extends AppController {
                 $this->redirect(array('controller' => 'users', 'action' => 'personal'));
             }else{
                 $this->data=array();
+
                 $this->Session->setFlash('Please enter correct email and password.', 'error');
 
             }           

@@ -4,6 +4,7 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
             <?php echo $this->element('sidebar'); ?>
             <div class="main col-md-9 col-sm-8 col-xs-12">
                 <h2>Edit Your Profile<span><a href="#">View Profile</a></span></h2>
@@ -363,5 +364,5 @@
                     </div>
                 </div>
             </div>
-
+</div>
             </section>

@@ -15,76 +15,57 @@
 <section class="content">
 
     <div class="container">
+
         <div class="row">
-
-             <div class="col-lg-8 col-lg-offset-2">
-            <?php echo $this->element('sidebar'); 
-                echo $this->element('message'); 
-             echo $this->Form->create(false, array('id' => 'personal', 'url' => array('controller'=>'users','action'=>'personal'))); ?>
-
-           
-            
+            <div class="col-lg-8 col-lg-offset-2">
+            <?php echo $this->element('sidebar'); ?>
+            <?php echo $this->Session->flash(); ?>
+            <?php echo $this->Form->create(false, ['id' => 'xxx', 'url' => '/users/personal/' . $clinicDetails['User']['id']]); ?>
             <div class="main col-md-9 col-sm-8 col-xs-12">
                 <h2>Edit Your Profile<span><a href="#">View Profile</a></span></h2>
 
+
+
+
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                        <label>Name</label>
+                        <label>CLinic Name</label>
                         <input type="text" name="data[User][first_name]"  value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['first_name'];
+                        if (!empty($clinicDetails)) {
+                            echo $clinicDetails['User']['first_name'];
                         }
                         ?>" class="form-control" />
                     </div>
-                    <input name="data[User][id]" type="hidden" value="<?php echo $userInfo['User']['id']; ?>">
+                    <input name="data[User][id]" type="hidden" value="<?php echo $clinicDetails['User']['id']; ?>">
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                        <label>Email Address</label>
+                        <label>Email </label>
                         <input name="data[User][email]" type="email" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['email'];
+                        if (!empty($clinicDetails)) {
+                            echo $clinicDetails['User']['email'];
                         }
                         ?>" placeholder="Email Address" class="form-control" required=""/>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                        <label>Gender <dl><input type="radio" name="data[User][gender]" <?php if ($userInfo['User']['gender'] == "male") { ?> checked="checked" <?php } ?> value="male" /> Male</dl>
-                            <dl><input type="radio" name="data[User][gender]" <?php if ($userInfo['User']['gender'] == "female") { ?> checked="checked" <?php } ?> value="female" /> Female</dl></label>
-                    </div>
-                </div>
 
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Mobile Number<span>*</span></label>
                         <input type="text"   id="mobile text" name="data[User][mobile_no]" maxlength="10" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['mobile_no'];
+                        if (!empty($clinicDetails)) {
+                            echo $clinicDetails['User']['mobile_no'];
                         }
                         ?>" placeholder="Mobile Number" class="form-control" />
                         <span id="mob"></span>
                         <span id="mobs"></span>
                     </div>
-                    
-                    <script>
-                        $(function(){
-  $('#txt').keypress(function(e){
-    if(e.which == 97 || e.which == 98 || e.which == 99 || e.which == 110 || e.which == 111 || e.which == 65 || e.which == 66 || e.which == 67 || e.which == 78 || e.which == 79 || e.which == 49 || e.which == 50 || e.which == 51 || e.which == 52 || e.which == 53){
-    } else {
-      return false;
-    }
-  });
-});
-                        </script>
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                        <label>Alternate Number</label>
-                        <input type="text" name="data[User][alternate_mobile_non]" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['alternate_mobile_non'];
+                        <label>Website </label>
+                        <input type="text" name="data[User][website]" value="<?php
+                        if (!empty($clinicDetails)) {
+                            echo $clinicDetails['User']['website'];
                         }
-                        ?>" placeholder="Alternate Number" id="mobile1" maxlength="10"class="form-control" />
-                        <span id="mob1"></span>
-                        <span id="mobs1"></span>
+                        ?>" placeholder="Enter URL" class="form-control" />
                     </div>
                 </div>
 
@@ -92,8 +73,8 @@
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                         <label>Street Address</label>
                         <input type="text" name="data[User][address]" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['address'];
+                        if (!empty($clinicDetails)) {
+                            echo $clinicDetails['User']['address'];
                         }
                         ?>" placeholder="Street Address" class="form-control" />
                     </div>
@@ -105,7 +86,7 @@
                         <select name="data[User][country_id]" class="form-control">
                             <option>Select Country</option>
                             <?php foreach ($countryList as $country) { ?>
-                                <option <?php if ($userInfo['User']['country_id'] == $country['Country']['id']) { ?> selected="selected" <?php } ?> value='<?php echo $country['Country']['id'] ?>' >
+                                <option <?php if ($clinicDetails['User']['country_id'] == $country['Country']['id']) { ?> selected="selected" <?php } ?> value='<?php echo $country['Country']['id'] ?>' >
                                     <?php echo $country['Country']['country_name']; ?>
                                 </option>
                             <?php } ?>
@@ -114,16 +95,16 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 form-group">
                         <label>City</label>
                         <input name="data[User][city]" type="text" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['city'];
+                        if (!empty($clinicDetails)) {
+                            echo $clinicDetails['User']['city'];
                         }
                         ?>" placeholder="Enter City Name" class="form-control" />
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Locality</label>
                         <input name="data[User][locality]" type="text" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['locality'];
+                        if (!empty($clinicDetails)) {
+                            echo $clinicDetails['User']['locality'];
                         }
                         ?>" placeholder="Enter Locality Name" class="form-control" />
                     </div>
@@ -133,68 +114,37 @@
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>State/Province/Region</label>
                         <input name="data[User][state]" type="text" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['state'];
+                        if (!empty($clinicDetails)) {
+                            echo $clinicDetails['User']['state'];
                         }
                         ?>" placeholder="State/Province/Region" class="form-control" />
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Zip/Postal Code</label>
                         <input name="data[User][zipcode]" type="text" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['zipcode'];
+                        if (!empty($clinicDetails)) {
+                            echo $clinicDetails['User']['zipcode'];
                         }
                         ?>" placeholder="Zip/Postal Code" class="form-control" />
                     </div>
                 </div>
-                <script type="text/javascript">
-                    $(function () {
-                        $('#datetimepicker4').datetimepicker({
-                            pickTime: false
-                        });
-                    });
-                </script>
-                <div class="row">
-
-
-                    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                        <label>Date of Birth</label>
-                        <input id="datepicker" name="data[User][date_of_birth]" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['date_of_birth'];
-                        }
-                        ?>" placeholder="dd/mm/yy" class="form-control" />
-                        <span class="add-on">
-                            <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                            </i>
-                        </span>
-                    </div>
-
-
-                    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                        <label>Website </label>
-                        <input type="text" name="data[User][website]" value="<?php
-                        if (!empty($userInfo)) {
-                            echo $userInfo['User']['website'];
-                        }
-                        ?>" placeholder="Enter URL" class="form-control" />
-                    </div>
-                </div>
+                
+               
 
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>Short Introduction</label>
                         <textarea rows="" cols=""  name="data[User][short_desc]" class="form-control" placeholder="Short Introduction"><?php
-                            if (!empty($userInfo)) {
-                                echo $userInfo['User']['short_desc'];
+                            if (!empty($clinicDetails)) {
+                                echo $clinicDetails['User']['short_desc'];
                             }
                             ?></textarea>
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                         <label>General Description</label>
                         <textarea rows="" cols="" name="data[User][general_desc]" class="form-control" placeholder="General Description"><?php
-                            if (!empty($userInfo)) {
-                                echo $userInfo['User']['general_desc'];
+                            if (!empty($clinicDetails)) {
+                                echo $clinicDetails['User']['general_desc'];
                             }
                             ?></textarea>
                     </div>
@@ -210,7 +160,8 @@
             <?php echo $this->Form->end(); ?>
         </div>
     </div>
-</div>
+    </div>
+
 </section>
 
 <script>
