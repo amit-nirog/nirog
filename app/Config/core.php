@@ -387,7 +387,7 @@ Cache::config('_cake_model_', array(
     'duration' => $duration
 ));
 if ($_SERVER['HTTP_HOST'] == "localhost") {
-    define("BASEURL", "http://" . $_SERVER['HTTP_HOST'] . "/nirog/nirog/");
+    define("BASEURL", "http://" . $_SERVER['HTTP_HOST'] . "/weblink/nirog/nirog/");
     
     
 } else {
