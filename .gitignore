@@ -1,4 +1,4 @@
-app/tmp/
+app/tmp/*
 nbproject/
 
 app/Config/core.php
